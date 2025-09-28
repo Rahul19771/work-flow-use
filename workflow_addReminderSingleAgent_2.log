@@ -1,0 +1,109 @@
+INFO     [browser_use.telemetry.service] Anonymized telemetry enabled. See https://docs.browser-use.com/development/telemetry for more information.
+INFO     [workflow_use.builder.service] BuilderService initialized.
+Loading workflow from: /Users/asha-work/workflow-use2/workflow-use/workflows/practice-fusion/add_reminderSingleAgent.workflow.json
+
+Workflow loaded successfully.
+
+Running workflow as tool with prompt: "Use login URL 'https://static.practicefusion.com/apps/ehr/index.html#/login', username 'rahul@asha.health' and password 'Asha@123' to add a task for patient 'Akshay'. The task is 'Need to call back on July 2nd 2025', assign it to 'Rahul Peddaiahgari' and set the reminder date as '2025-07-02'."
+INFO     [workflow_use.workflow.service] Running workflow as tool with inputs: {'login_url': 'https://static.practicefusion.com/apps/ehr/index.html#/login', 'username': 'rahul@asha.health', 'password': 'Asha@123', 'patient_name': 'Akshay', 'task_details': 'Need to call back on July 2nd 2025', 'assigned_user': 'Rahul Peddaiahgari', 'reminder_date': '2025-07-02'}
+INFO     [browser_use.BrowserSession🆂 949c.36] 🌎 Launching new local browser playwright:chromium keep_alive=True user_data_dir= ~/workflow-use2/workflow-use/workflows/user_data_dir/practice_fusion/rahul
+INFO     [browser_use.BrowserSession🆂 949c.36]  ↳ Spawned browser_pid=34422 ~/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium
+INFO     [workflow_use.workflow.service] --- Running Step 1/1 -- Log in to Practice Fusion using the provided URL and credentials, then create a new task for the specified patient. ---
+INFO     [workflow_use.workflow.service] Running agent task: Open the Practice Fusion portal at 'https://static.practicefusion.com/apps/ehr/index.html#/login' and log in using username 'rahul@asha.health' and password 'Asha@123'. Close if any irrelevant modals exist. Navigate to the Tasks section, click 'New task', search and select patient 'Akshay', enter the task as 'Need to call back on July 2nd 2025', assign it to 'Rahul Peddaiahgari', set the reminder date as '2025-07-02', and save the task. Confirm the task was successfully added by checking the task list.
+INFO     [browser_use.agent.service] 💾 File system path: /var/folders/k7/8c4jqjv10r9c9k6w6css03c40000gp/T/e4f07f8f-1c28-42b9-a5b1-6e235b57652c
+INFO     [browser_use.Agent🅰 e97a on 🆂 e97a.36] 🧠 Starting a browser-use agent 0.3.2 with base_model=gpt-4o +tools +vision +memory extraction_model=gpt-4o  +file_system
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.68] 🚀 Starting task: Open the Practice Fusion portal at 'https://static.practicefusion.com/apps/ehr/index.html#/login' and log in using username 'rahul@asha.health' and password 'Asha@123'. Close if any irrelevant modals exist. Navigate to the Tasks section, click 'New task', search and select patient 'Akshay', enter the task as 'Need to call back on July 2nd 2025', assign it to 'Rahul Peddaiahgari', set the reminder date as '2025-07-02', and save the task. Confirm the task was successfully added by checking the task list.
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+INFO     [browser_use.BrowserSession🆂 949c.36] ➡️ Page navigation [0]about:blank used 0.0 KB in 0.55s
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.68] 📍 Step 1: Evaluating page with 0 interactive elements on: about:blank
+================================================================================
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.68] 🧠 LLM call => ChatOpenAI [✉️ 5 msg, ~5652 tk, 65152 char, 📷 img] => JSON out + 🔨 23 tools (function_calling)
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.68] 💡 Thinking:
+To accomplish the user's request, I will first need to open the Practice Fusion login page. Once I'm there, I can proceed to log in using the provided credentials, navigate to the Tasks section, and perform the subsequent actions of creating and confirming the task. The site needs to be accessed directly from the provided URL.
+I am currently in the first step, and the web page hasn't been accessed yet.
+I should open the Practice Fusion portal in a new tab to start the process.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.68] ❔ Eval: First step in the task planning, no actions taken yet. Initial state.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.68] 🧠 Memory: I need to open the Practice Fusion login page and log in, using the user's credentials, as the first action of this multi-step task.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.68] 🎯 Next goal: Open the Practice Fusion portal by navigating to the specified URL.
+
+INFO     [browser_use.BrowserSession🆂 949c.36] ➡️ Page navigation [1]static.practicefusion.com/apps/ehr/index… used 0.6 KB in 0.83s, waiting +0.17s for all frames to finish
+INFO     [browser_use.controller.service] 🔗  Opened new tab #0 with url https://static.practicefusion.com/apps/ehr/index.html#/login
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] ☑️ Executed action 1/1: open_tab(url='https://static.practicefusion.com/apps/ehr/index.html#/login')
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 2: Ran 1 actions in 11.77s: ✅ 1
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+INFO     [browser_use.BrowserSession🆂 949c.36] ➡️ Page navigation [0]static.practicefusion.com/apps/ehr/index… used 0.6 KB in 0.92s
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 2: Evaluating page with 13 interactive elements on: https://static.practicefusion.com/apps/ehr/index.h...
+================================================================================
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 LLM call => ChatOpenAI [✉️ 5 msg, ~6110 tk, 346195 char, 📷 img] => JSON out + 🔨 23 tools (function_calling)
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 💡 Thinking:
+I have successfully navigated to the Practice Fusion login page. The next step is to fill in the user's login credentials using the provided email and password. I want to ensure this step is correctly executed before proceeding to navigate the internal sections like Tasks. This will involve inputting the email into the field with index 4, and the password into the field with index 6, followed by submitting the login form using the button at index 8.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 👍 Eval: Navigated to the Practice Fusion login page successfully.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 Memory: I need to log in with provided user credentials to access the portal functions and proceed with adding a task.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🎯 Next goal: Input the email and password into their respective fields and click the login button.
+
+INFO     [browser_use.controller.service] ⌨️  Input rahul@asha.health into index 4
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] ☑️ Executed action 1/1: input_text(index=4 text='rahul@asha.health' xpath=None)
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 3: Ran 1 actions in 8.63s: ✅ 1
+INFO     [browser_use.BrowserSession🆂 949c.36] ➡️ Page navigation [0]static.practicefusion.com/apps/ehr/index… used 0.6 KB in 0.52s
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 3: Evaluating page with 13 interactive elements on: https://static.practicefusion.com/apps/ehr/index.h...
+================================================================================
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 LLM call => ChatOpenAI [✉️ 5 msg, ~6233 tk, 346543 char, 📷 img] => JSON out + 🔨 23 tools (function_calling)
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 💡 Thinking:
+I have successfully entered the email address and now need to input the password into the login form to proceed further.
+The previous step where I input the email into the field was successful. Now, the next step is to enter the password and submit the form to log in.
+I have successfully input the email and observed the interactive elements on the page. The email field input was successful.
+I need to input the password 'Asha@123' into the password field (element 6) and click the login button (element 8) to proceed. After logging in, I will check for any modals to close as instructed before proceeding to the Tasks section.
+I'm about to input the password and click the login button to proceed with login.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 👍 Eval: Entered email address successfully. Verdict: Success
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 Memory: Entered email, now need to complete login by entering the password and clicking login. Prepare to handle any modals post-login.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🎯 Next goal: Input the password 'Asha@123' into the password field and click the login button to proceed.
+
+INFO     [browser_use.controller.service] ⌨️  Input Asha@123 into index 6
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] ☑️ Executed action 1/1: input_text(index=6 text='Asha@123' xpath=None)
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 4: Ran 1 actions in 8.26s: ✅ 1
+INFO     [browser_use.BrowserSession🆂 949c.36] ➡️ Page navigation [0]static.practicefusion.com/apps/ehr/index… used 0.6 KB in 0.52s
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 4: Evaluating page with 13 interactive elements on: https://static.practicefusion.com/apps/ehr/index.h...
+================================================================================
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 LLM call => ChatOpenAI [✉️ 5 msg, ~6360 tk, 347537 char, 📷 img] => JSON out + 🔨 23 tools (function_calling)
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 💡 Thinking:
+The previous step involved entering the email and password successfully. Now, I need to click the login button to proceed into the Practice Fusion portal.
+The email and password were entered into the login page correctly. I need to move forward with logging in to access the necessary areas within the portal.
+This task requires adding a task to a specific patient's profile. The first step is ensuring successful login.
+The current page shows the login button with index [8]. Clicking this will allow us to attempt logging into the account.
+After logging in, I will need to handle any modals or redirects before navigating to the Tasks section.
+I'll proceed by clicking the login button to continue.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 👍 Eval: Entered the password correctly. Verdict: Success
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 Memory: Email and password have been entered. Need to proceed with clicking the login button to continue with the login process.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🎯 Next goal: Click the login button by interacting with element index [8] to proceed with logging in.
+
+INFO     [browser_use.controller.service] 🖱️  Clicked button with index 8: Log in
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] ☑️ Executed action 1/1: click_element_by_index(index=8 xpath=None)
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 5: Ran 1 actions in 7.00s: ✅ 1
+INFO     [browser_use.BrowserSession🆂 949c.36] ➡️ Page navigation [0]static.practicefusion.com/apps/ehr/index… used 0.6 KB in 0.52s
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 5: Evaluating page with 13 interactive elements on: https://static.practicefusion.com/apps/ehr/index.h...
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] Last step finishing up
+================================================================================
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 LLM call => ChatOpenAI [✉️ 6 msg, ~6612 tk, 342406 char, 📷 img] => JSON out + 🔨 23 tools (function_calling)
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 💡 Thinking:
+The login process on the Practice Fusion portal was initiated successfully, but the user request included multiple steps beyond just logging in, such as navigating to the Tasks section, creating a new task, assigning it to a specific person, setting a reminder date, and verifying the task. These additional actions were not completed. As we have reached the final step without executing these steps, the task is incomplete.
+I will now conclude with a summary of what was accomplished and what remains unfinished, and set success to false because the ultimate objective wasn't completed.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] ❔ Eval: Clicked the login button to proceed with logging in. Verdict: Uncertain due to restricted steps remaining.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🧠 Memory: Successfully entered email and password and clicked the login button on Practice Fusion. However, further steps like task creation and assignment were not completed.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 🎯 Next goal: Summarize the attempts and provide a verdict on task completion, indicating the remaining steps to fulfill the user request.
+
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] ☑️ Executed action 1/1: done(text="I successfully navigated to the Practice Fusion login page and input the email and password. The login button was clicked, but as the final step was reached, the following actions were not completed: navigating to the Tasks section, creating and saving a new task for patient 'Akshay', setting the task reminder, assigning it to 'Rahul Peddaiahgari', and confirming the task. As such, the task remains incomplete." success=False files_to_display=[])
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📄 Result: I successfully navigated to the Practice Fusion login page and input the email and password. The login button was clicked, but as the final step was reached, the following actions were not completed: navigating to the Tasks section, creating and saving a new task for patient 'Akshay', setting the task reminder, assigning it to 'Rahul Peddaiahgari', and confirming the task. As such, the task remains incomplete.
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] 📍 Step 6: Ran 1 actions in 9.49s: ✅ 1
+INFO     [browser_use.Agent🅰 e97a on 🆂 949c.96] ❌ Task completed without success
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+WARNING  [browser_use.sync.service] Failed to send event to cloud: HTTP 404 - <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/e0a67eafb6a190ed.css?dpl
+INFO     [browser_use.BrowserSession🆂 949c.36] 🕊️ BrowserSession.stop() called but keep_alive=True, leaving the browser running. Use .kill() to force close.
+WARNING  [workflow_use.workflow.service] Agent step 1 failed evaluation.
+WARNING  [workflow_use.workflow.service] Deterministic step 1 (agent) failed: Agent step 1 failed evaluation.. Attempting fallback with agent.
+ERROR    [workflow_use.workflow.service] Step 1 failed and fallback is disabled or not applicable. Error: Agent step 1 failed evaluation.
+INFO     [browser_use.BrowserSession🆂 949c.36] 🛑 Closing browser_pid=34422 browser context <BrowserContext browser=None>
+Error running workflow as tool: Agent step 1 failed evaluation.
